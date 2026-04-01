@@ -45,14 +45,13 @@ Add this line to your HTML:
     autoplay>
 </nirmal-player>
 ```
-<!-- Playing a .cdx or .edu animation -->
+
 
 ```html
-</nirmal-player
-    src=Nirmal.cdx"
-    speed="1"
-    style="width:300px;height:300px;"
-    loop
+<!-- Playing a .cdx or .edu animation  -->
+<nirmal-player 
+    src="Nirmal.cdx"
+    speed="1" 
     autoplay>
 </nirmal-player>
 ```
