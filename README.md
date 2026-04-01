@@ -28,7 +28,7 @@ Add this line to your HTML:
 
 ### 2. Basic Implementation
 ```html
-<!-- Playing a .cdx or .edu animation -->
+<!-- Playing a .cdx or .edu animation Use Url -->
 <nirmal-player 
     src="https://dev.dubhub.lk/anime/dev.cdx" 
     speed="1" 
@@ -45,7 +45,17 @@ Add this line to your HTML:
     autoplay>
 </nirmal-player>
 ```
+<!-- Playing a .cdx or .edu animation -->
 
+```html
+</nirmal-player>
+    src=Nirmal.cdx"
+    speed="1"
+    style="width:300px;height:300px;"
+    loop
+    autoplay>
+<nirmal-player 
+```
 ---
 
 ## 💎 API Documentation
