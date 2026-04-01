@@ -48,13 +48,13 @@ Add this line to your HTML:
 <!-- Playing a .cdx or .edu animation -->
 
 ```html
-</nirmal-player>
+</nirmal-player
     src=Nirmal.cdx"
     speed="1"
     style="width:300px;height:300px;"
     loop
     autoplay>
-<nirmal-player 
+</nirmal-player>
 ```
 ---
 
