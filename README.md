@@ -2,6 +2,8 @@
 
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg?style=for-the-badge&logo=github)]()
 [![Type](https://img.shields.io/badge/Type-Web_Component-blue.svg?style=for-the-badge&logo=javascript)]()
+[![Framework](https://img.shields.io/badge/Framework-Flutter-02569B.svg?style=for-the-badge&logo=flutter&logoColor=white)]()
+[![Language](https://img.shields.io/badge/Language-Dart-0175C2.svg?style=for-the-badge&logo=dart&logoColor=white)]()
 [![License](https://img.shields.io/badge/License-MIT-orange.svg?style=for-the-badge)]()
 
 **Nirmal Player** is a high-performance, drop-in web component designed to play complex **Lottie JSON**, **Telegram Stickers (TGS)**, and **CDX** animations with zero configuration. It features built-in streaming decompression, advanced caching, and automatic dependency management.
@@ -28,7 +30,7 @@ Add this line to your HTML:
 
 ### 2. Basic Implementation
 ```html
-<!-- Playing a .cdx or .edu animation Use Url -->
+<!-- Playing a .cdx or .edu animation -->
 <nirmal-player 
     src="https://dev.dubhub.lk/anime/dev.cdx" 
     speed="1" 
@@ -46,15 +48,6 @@ Add this line to your HTML:
 </nirmal-player>
 ```
 
-
-```html
-<!-- Playing a .cdx or .edu animation  -->
-<nirmal-player 
-    src="Nirmal.cdx"
-    speed="1" 
-    autoplay>
-</nirmal-player>
-```
 ---
 
 ## 💎 API Documentation
@@ -70,6 +63,52 @@ You can use either of the following tags:
 | `speed` | `Number` | `1` | Playback speed (e.g., `0.5`, `1.5`, `2`). |
 | `loop` | `Boolean`| `false` | If present, the animation will restart once finished. |
 | `autoplay` | `Boolean`| `false` | If present, starts playing immediately on load. |
+
+---
+
+## 📱 Flutter Implementation
+
+You can also use Nirmal Player in your Flutter applications using our official `cdx_player` package.
+
+### 📦 Installation (pub.dev)
+Add this to your `pubspec.yaml`:
+
+```yaml
+dependencies:
+  cdx_player: ^1.0.1
+```
+
+Then run:
+```bash
+flutter pub get
+```
+
+### 🛠️ Usage
+
+#### Basic Implementation
+```dart
+import 'package:cdx_player/cdx_player.dart';
+
+// Playing a .cdx animation from a URL
+CdxPlayer(
+  src: 'https://sticker-explorer.netlify.app/api/cdx?file_id=YOUR_ID',
+  width: 300,
+  height: 300,
+)
+```
+
+#### Full Implementation
+```dart
+CdxPlayer(
+  src: 'sticker.cdx',
+  width: 250,
+  height: 250,
+  autoplay: true,
+  loop: true,
+  placeholder: CircularProgressIndicator(),
+  errorWidget: Icon(Icons.error),
+)
+```
 
 ---
 
