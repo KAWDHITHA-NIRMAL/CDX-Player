@@ -1,36 +1,53 @@
-# 🚀 Nirmal Player — Ultra-Light Lottie & TGS Animation Engine
+# CDX Plyer (by K.Nirmal)
+High-performance Lottie & TGS (.cdx) player for the web. No dependencies needed in your HTML, it auto-loads Lottie from CDN.
 
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg?style=for-the-badge&logo=github)]()
 [![Type](https://img.shields.io/badge/Type-Web_Component-blue.svg?style=for-the-badge&logo=javascript)]()
-[![Framework](https://img.shields.io/badge/Framework-Flutter-02569B.svg?style=for-the-badge&logo=flutter&logoColor=white)]()
-[![Language](https://img.shields.io/badge/Language-Dart-0175C2.svg?style=for-the-badge&logo=dart&logoColor=white)]()
 [![License](https://img.shields.io/badge/License-MIT-orange.svg?style=for-the-badge)]()
-
-**Nirmal Player** is a high-performance, drop-in web component designed to play complex **Lottie JSON**, **Telegram Stickers (TGS)**, and **CDX** animations with zero configuration. It features built-in streaming decompression, advanced caching, and automatic dependency management.
 
 ---
 
-## ✨ Key Features
+🚀 Features
+- **Auto Decompression:** Directly plays .cdx, .tgs, and GZipped Lottie files.
+- **Smart Caching:** Uses Browser Cache API to save bandwidth.
+- **Ultra Lightweight:** Single file, easy to integrate.
+- **Framework Ready:** Works in React, Vue, Angular, and Plain HTML.
+- **Zero-Config:** Automatically injects its own dependencies (Bodymovin/Lottie).
 
-- 📦 **Zero-Config:** Automatically injects its own dependencies (Bodymovin/Lottie).
-- 🚀 **Turbo Caching:** Dual-layer caching (Memory + Cache API) for instant subsequent loads.
-- 🎨 **SVG Rendering:** High-fidelity, scalable animation playback.
+---
+
+📦 Installation (NPM)
+```bash
+npm install cdx-plyer
+```
+
+**Example package.json**
+If you are building a React/Next.js or Node project, your `package.json` should look like this:
+
+```json
+{
+  "name": "my-animation-project",
+  "version": "1.0.2",
+  "dependencies": {
+    "cdx-plyer": "^1.0.2"
+  }
+}
+```
 
 ---
 
 ## 🛠️ Usage
 
-Simply include the script in your HTML `<head>` and start using the custom element.
+### 1. Plain HTML
+Add this line to your `<head>`:
 
-### 1. Installation
-Add this line to your HTML:
 ```html
 <script src="https://dev.dubhub.lk/script/nirmal.js"></script>
 ```
 
-### 2. Basic Implementation
+**Basic Implementation**
 ```html
-<!-- Playing a .cdx or .edu animation -->
+<!-- Playing a .cdx or .edu animation using URL -->
 <nirmal-player 
     src="https://dev.dubhub.lk/anime/dev.cdx" 
     speed="1" 
@@ -39,13 +56,23 @@ Add this line to your HTML:
     autoplay>
 </nirmal-player>
 ```
-```html
-<!-- Playing a native .tgs animation -->
-<nirmal-player 
-    src="https://dev.dubhub.lk/anime/dev.tgs" 
-    speed="1" 
-    autoplay>
-</nirmal-player>
+
+### 2. React / Next.js
+If you installed via NPM, import it in your component or `_app.js`.
+
+```javascript
+import 'cdx-plyer';
+
+function App() {
+  return (
+    <nirmal-player 
+       src="https://dev.dubhub.lk/anime/dev.cdx" 
+       autoplay 
+       speed="1"
+       style={{ width: '300px', height: '300px' }} 
+    />
+  );
+}
 ```
 
 ---
@@ -222,4 +249,12 @@ If you like this project, please don't forget to **Give a Star** on GitHub! It m
 
 ---
 
+---
+
 © 2026 [K.Nirmal](https://dubhub.lk) | **K.Nirmal | Cyber Yakku | CodeX Developers**
+
+Developed by K.Nirmal (CyberYakku)
+For more stickers visit: [Sticker Explorer](https://sticker-explorer.netlify.app/)
+
+**Keywords**
+`lottie` `tgs` `cdx` `telegram-stickers` `animation` `player` `sticker-explorer`
